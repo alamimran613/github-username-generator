@@ -4,44 +4,152 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GitHub Username Generator</title>
-  <link rel="stylesheet" href="./stylle.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+  <div class="main-container">
+    <!-- 🌟 Tool Header -->
+    <header class="tool-header">
+      <h1>⚡ GitHub Username Generator</h1>
+      <p class="tool-subtitle">Find the perfect username for your GitHub profile</p>
+    </header>
 
-    <!-- 🌟 Tool Name Card -->
-    <h1 class="tool-name">⚡ GitHub Username Generator</h1>
+    <!-- 🌟 Dual Panel Layout -->
+    <div class="dual-panel-container">
+      <!-- 🌟 Left Panel: Username Checker -->
+      <div class="feature-panel checker-panel">
+        <div class="panel-header">
+          <h2>🔍 Check Availability</h2>
+          <p class="panel-description">Verify if your desired username is available</p>
+        </div>
+        
+        <div class="input-section">
+          <label for="usernameCheckInput" class="visually-hidden">Enter desired GitHub username</label>
+          <input 
+            type="text" 
+            id="usernameCheckInput" 
+            placeholder="Enter username to check"
+            maxlength="39"
+            autocomplete="off"
+            aria-describedby="username-help"
+          />
+          <button id="checkUsernameBtn" onclick="checkSingleUsername()" aria-describedby="check-help">
+            <span class="btn-text">Check Username</span>
+            <span class="btn-icon">🔍</span>
+          </button>
+        </div>
 
-    <!-- 🌟 Feature Card: Check Username -->
-    <div class="feature-card">
-      <h2>🔍 Check Username Availability</h2>
-      <div class="check-section">
-        <input type="text" id="usernameCheckInput" placeholder="Enter desired GitHub username" />
-        <button onclick="checkGitHubUsername()">Check Username</button>
-        <div id="checkResults"></div>
+        <div id="checkResults" class="results-area" role="status" aria-live="polite"></div>
+        
+        <div class="help-section">
+          <small id="username-help" class="help-text">
+            <span class="help-icon">💡</span>
+            GitHub usernames: 1-39 characters, letters, numbers, hyphens only
+          </small>
+        </div>
+      </div>
+
+      <!-- 🌟 Right Panel: Username Generator -->
+      <div class="feature-panel generator-panel">
+        <div class="panel-header">
+          <h2>🎲 Generate Usernames</h2>
+          <p class="panel-description">Create unique username suggestions</p>
+        </div>
+        
+        <div class="input-section">
+          <label for="nameInput" class="visually-hidden">Enter your name</label>
+          <input 
+            type="text" 
+            id="nameInput" 
+            placeholder="Enter your name or keyword"
+            maxlength="20"
+            autocomplete="off"
+            aria-describedby="name-help"
+          />
+          <button id="generateBtn" onclick="generateUsernames()" aria-describedby="generate-help">
+            <span class="btn-text">Generate Ideas</span>
+            <span class="btn-icon">✨</span>
+          </button>
+        </div>
+
+        <div class="results-area" id="results" role="status" aria-live="polite"></div>
+        <div id="progressIndicator" class="progress-indicator" style="display: none;" role="status" aria-live="polite"></div>
+        
+        <div class="help-section">
+          <small id="name-help" class="help-text">
+            <span class="help-icon">💡</span>
+            Enter any name to generate professional GitHub usernames
+          </small>
+        </div>
       </div>
     </div>
 
-    <!-- 🌟 Feature Card: Generate Username -->
-    <div class="feature-card">
-      <h2>🎲 Generate Usernames</h2>
-      <input type="text" id="nameInput" placeholder="Enter your name" />
-      <br />
-      <button onclick="generateUsernames()">Generate</button>
-      <div class="results" id="results"></div>
+    <!-- 🌟 Stats Dashboard -->
+    <div class="stats-dashboard" style="display: none;" id="statsCard">
+      <h3>📊 Session Statistics</h3>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number" id="checksCount">0</span>
+          <span class="stat-label">Checks</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" id="generatedCount">0</span>
+          <span class="stat-label">Generated</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" id="availableCount">0</span>
+          <span class="stat-label">Available</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" id="successRate">0%</span>
+          <span class="stat-label">Success Rate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🌟 Info Cards -->
+    <div class="info-cards">
+      <div class="info-card rate-limit-card">
+        <div class="card-icon">⚠️</div>
+        <div class="card-content">
+          <h4>Rate Limit Notice</h4>
+          <p>GitHub API has rate limits. Usernames are checked in smart batches to avoid limits.</p>
+          <small>💡 Tip: Wait a few seconds between generations for optimal results</small>
+        </div>
+      </div>
+
+      <div class="info-card features-card">
+        <div class="card-icon">⚡</div>
+        <div class="card-content">
+          <h4>Features</h4>
+          <div class="feature-tags">
+            <span class="feature-tag">✅ Real-time checking</span>
+            <span class="feature-tag">🎯 Smart generation</span>
+            <span class="feature-tag">📋 One-click copy</span>
+            <span class="feature-tag">📱 Mobile friendly</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- 🌟 Footer -->
-    <footer>
-      <p>
-        ⚡ Powered by ➡️
-        <a href="https://www.youtube.com/@TechnoSnag" target="_blank">
-          🎥 <strong>Techno Snag</strong>
-        </a>
-      </p>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>⚡ Enhanced GitHub Username Generator</p>
+        <p class="footer-links">
+          Made with ❤️ by 
+          <a href="https://www.youtube.com/@TechnoSnag" target="_blank" rel="noopener noreferrer">
+            🎥 <strong>Techno Snag</strong>
+          </a>
+        </p>
+      </div>
     </footer>
   </div>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
