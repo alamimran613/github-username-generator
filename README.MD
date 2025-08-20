@@ -27,7 +27,7 @@ If you’ve found my content helpful — tutorials, code, or videos — and want
 
 ## 🤝 Contributing
 
-### 📌 Before Contributing Read ➡️ [Contribution Guidelines](./CONTRIBUTING.md)
+### 📌 Before Contributing Read ➡️ [Contribution Guidelines](./CONTRIBUTING.md) and [Project Documentation](./docs/DETAILED_DOCUMENTATION.md).
 
 Want to contribute? Awesome! You can help improve this project by:
 
