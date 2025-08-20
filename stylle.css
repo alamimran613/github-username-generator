@@ -1,0 +1,151 @@
+/* 🌟 Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #141E30, #243B55);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* 🌟 Container */
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 35px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  width: 420px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: 1.6rem;
+  color: #00d2ff;
+  text-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
+}
+
+/* 🌟 Input Field */
+input {
+  padding: 12px;
+  width: 90%;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+input:focus {
+  border: 2px solid #00d2ff;
+  box-shadow: 0 0 10px rgba(0,210,255,0.5);
+}
+
+/* 🌟 Button */
+button {
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+  box-shadow: 0 4px 15px rgba(0,210,255,0.5);
+}
+
+/* 🌟 Results Section */
+.results {
+  margin-top: 22px;
+  text-align: left;
+}
+
+/* 🌟 Username Card */
+.username {
+  background: rgba(255,255,255,0.08);
+  padding: 12px;
+  border-radius: 12px;
+  margin: 10px 0;
+  font-family: monospace;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, opacity 0.5s ease;
+  opacity: 0; /* start hidden for animation */
+}
+.username.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🌟 Status Styling */
+.status {
+  flex-shrink: 0;
+  font-weight: bold;
+}
+.available { color: #4CAF50; }
+.taken { color: #FF5252; }
+
+/* 🌟 Copy Button */
+.copy-btn {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+.copy-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
+  box-shadow: 0 3px 10px rgba(255,105,180,0.4);
+}
+
+/* 🌟 Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* 🌟 Footer Section */
+footer {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+  color: #ccc;
+  text-align: center;
+}
+
+footer a {
+  color: #00d2ff !important;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+footer a:visited {
+  color: #00d2ff !important;
+}
+footer a:hover {
+  color: #ff6a00;
+  text-shadow: 0 0 8px rgba(255, 106, 0, 0.6);
+}
