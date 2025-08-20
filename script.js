@@ -1,8 +1,12 @@
 // Professional suffix pool for generator
 const suffixes = [
-  "dev", "codes", "tech", "engineer", "labs", "hq", "system",
-  "cloud", "data", "works", "studio", "official", "solutions",
-  "builds", "opensource", "digital", "stack", "core"
+
+  "dev", "codes", "coder", "engineer", "programmer", "developer",
+  "stack", "tech", "sys", "ops", "devops", "pro", "guru", "ninja",
+  "builds", "studio", "core", "forge", "hub", "script", "backend",
+  "api", "cli", "sdk", "db", "data", "ai", "ml", "infra", "server",
+  "cloud", "web"
+
 ];
 
 // Shuffle helper
