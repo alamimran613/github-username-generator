@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GitHub Username Generator</title>
-  <link rel="stylesheet" href="./stylle.css">
+  <link rel="stylesheet" href="./stylle.css" />
 </head>
 <body>
   <div class="container">
-    <h1>⚡ GitHub Username Generator</h1>
-    <input type="text" id="nameInput" placeholder="Enter your name">
-    <br>
-    <button onclick="generateUsernames()">Generate</button>
-    
-    <div class="results" id="results"></div>
 
-    <!-- 🌟 Footer Section -->
+    <!-- 🌟 Tool Name Card -->
+    <h1 class="tool-name">⚡ GitHub Username Generator</h1>
+
+    <!-- 🌟 Feature Card: Check Username -->
+    <div class="feature-card">
+      <h2>🔍 Check Username Availability</h2>
+      <div class="check-section">
+        <input type="text" id="usernameCheckInput" placeholder="Enter desired GitHub username" />
+        <button onclick="checkGitHubUsername()">Check Username</button>
+        <div id="checkResults"></div>
+      </div>
+    </div>
+
+    <!-- 🌟 Feature Card: Generate Username -->
+    <div class="feature-card">
+      <h2>🎲 Generate Usernames</h2>
+      <input type="text" id="nameInput" placeholder="Enter your name" />
+      <br />
+      <button onclick="generateUsernames()">Generate</button>
+      <div class="results" id="results"></div>
+    </div>
+
+    <!-- 🌟 Footer -->
     <footer>
-      <p>⚡ Powered by ➡️
+      <p>
+        ⚡ Powered by ➡️
         <a href="https://www.youtube.com/@TechnoSnag" target="_blank">
           🎥 <strong>Techno Snag</strong>
         </a>
       </p>
     </footer>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
