@@ -1,24 +1,22 @@
 # GitHub Username Generator
 
-Welcome to the **GitHub Username Generator** repository! ⚡  
+Welcome to the **GitHub Username Generator** repository! ⚡
 
-This project is a simple and stylish **web app** that helps you generate unique, professional-looking GitHub usernames. It also checks availability using the GitHub API. Built with **HTML, CSS, and JavaScript**, this tool is perfect for developers, students, and creators looking to quickly find the right GitHub handle.  
-
-
+This project is a simple and stylish **web app** that helps you generate unique, professional-looking GitHub usernames. It also checks availability using the GitHub API. Built with **HTML, CSS, and JavaScript**, this tool is perfect for developers, students, and creators looking to quickly find the right GitHub handle.
 
 ## 📂 Features
 
-- ✅ Generate professional GitHub usernames with suffixes  
-- ✅ Randomized suggestions with number variations  
-- ✅ Simulated availability check (for learning/demo)  
-- ✅ Copy-to-clipboard functionality  
-- ✅ Clean UI with animations and modern design  
+- ✅ Generate professional GitHub usernames with suffixes
+- ✅ Randomized suggestions with number variations
+- ✅ Simulated availability check (for learning/demo)
+- ✅ Copy-to-clipboard functionality
+- ✅ Clean UI with animations and modern design
 
-## 🚀 Visit Website  
+## 🚀 Visit Website
 
 🌐 **Visit Website**: [Click Here To Generate GitHub Username](https://alamimran613.github.io/github-username-generator/)
 
-## 💸 Support My Work 🤝	
+## 💸 Support My Work 🤝
 
 If you’ve found my content helpful — tutorials, code, or videos — and want to say **thanks**, here are a few ways to support 💖:
 
@@ -33,20 +31,18 @@ If you’ve found my content helpful — tutorials, code, or videos — and want
 
 Want to contribute? Awesome! You can help improve this project by:
 
-- Adding new features (like Instagram/Twitter username checks)  
-- Fixing issues, optimizing code, or adding comments  
-- Improving UI/UX with CSS or animations  
-- Writing documentation or tutorials  
+- Adding new features (like Instagram/Twitter username checks)
+- Fixing issues, optimizing code, or adding comments
+- Improving UI/UX with CSS or animations
+- Writing documentation or tutorials
 
 ## ⭐ Star This Repository!
 
 If you find this project helpful, please consider starring ⭐ the repository. Your support helps me keep building cool projects!
 
-
 ## 📄 License
 
-🛡️ License: MIT
- — Free to use with credit to Imran Alam / TechnoSnag
+🛡️ License: [MIT](LICENSE) — Free to use with credit to **Imran Alam / TechnoSnag**
 
 You can use this code for personal or commercial projects, just give proper credit in your content or description.
 
