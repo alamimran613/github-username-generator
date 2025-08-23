@@ -42,6 +42,7 @@ body {
   min-height: 100vh;
   padding: 20px;
   line-height: 1.6;
+   
 }
 
 /* 🌟 Accessibility */
@@ -730,3 +731,41 @@ button.loading::after {
     border-width: 2px;
   }
 }
+/* Light mode overrides */
+[data-theme="light"] {
+  --background-gradient: linear-gradient(135deg, #ffffff, #e0e0e0);
+  --card-background: rgba(255, 255, 255, 0.8);
+  --card-background-hover: rgba(240, 240, 240, 0.9);
+  --border-color: rgba(0,0,0,0.2);
+  --border-color-focus: rgba(0,0,0,0.3);
+  --text-color: #111; 
+  --text-secondary: #333;
+  --text-muted: #555;
+  --shadow-light: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-medium: 0 8px 18px rgba(0,0,0,0.15);
+  --shadow-heavy: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+#theme-toggle {
+  position: fixed; /* absolute se fixed better, always top-right */
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+   /* sab content ke upar dikhne ke liye */
+  background: none;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius-md);
+   width: auto; /* ya fixed width jaise 50px/60px */
+  min-width: 50px;
+  padding: 8px 12px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+
