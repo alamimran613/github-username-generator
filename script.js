@@ -801,6 +801,30 @@ function initializeApp() {
   
   console.log('GitHub Username Generator initialized successfully!');
   console.log(`API calls remaining: ${getRemainingApiCalls()}/${CONFIG.RATE_LIMIT_PER_HOUR}`);
+
+  // 🌗 Theme Toggle Setup
+const themeToggleBtn = document.getElementById('theme-toggle');
+const savedTheme = localStorage.getItem('theme');
+
+// Page load par theme set karo
+if (savedTheme) {
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  themeToggleBtn.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+} else {
+  // Default dark mode
+  document.documentElement.setAttribute('data-theme', 'dark');
+  themeToggleBtn.textContent = '🌙';
+}
+
+// Button click par toggle
+themeToggleBtn.addEventListener('click', () => {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  themeToggleBtn.textContent = newTheme === 'light' ? '🌙' : '☀️';
+});
+
 }
 
 // Create debounced version of check function
