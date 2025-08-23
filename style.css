@@ -283,6 +283,10 @@ button.loading .btn-text {
   opacity: 0;
 }
 
+button.loading .btn-icon {
+  display: none;
+}
+
 button.loading::after {
   content: '';
   position: absolute;
