@@ -507,6 +507,8 @@ async function generateUsernames() {
   const nameInput = document.getElementById('nameInput');
   const generateBtn = document.getElementById('generateBtn');
   const resultsContainer = document.getElementById('results');
+  const btnText = generateBtn.querySelector('.btn-text');
+  const btnIcon = generateBtn.querySelector('.btn-icon');
   
   const name = nameInput.value.trim();
   
@@ -561,6 +563,8 @@ async function generateUsernames() {
     state.isGenerating = false;
     generateBtn.classList.remove('loading');
     generateBtn.disabled = false;
+    btnText.textContent = 'Regenerate Ideas';
+    btnIcon.textContent = '🔄';
   }
 }
 
