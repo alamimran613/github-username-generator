@@ -840,3 +840,20 @@ if (document.readyState === 'loading') {
 } else {
   initializeApp();
 }
+
+// Visitor Counter Integration using CountAPI
+const counterNamespace = "github-username-generator";
+  const counterKey = "visitors";
+
+  async function updateVisitorCount() {
+    try {
+      // Increment and get visitor count
+      const res = await fetch(`https://api.countapi.xyz/get/${counterNamespace}/${counterKey}`);
+      const data = await res.json();
+      document.getElementById("visitor-count").innerText = data.value;
+    } catch (err) {
+      console.error("Visitor counter error:", err);
+    }
+  }
+
+  updateVisitorCount();
