@@ -772,4 +772,15 @@ button.loading::after {
   background: var(--primary-color);
   color: var(--text-color);
 }
+/* 🌟 Visitor Counter */
+.visitor-counter {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+.visitor-counter span {
+  font-weight: bold;
+  color: #fff;
+}
 
