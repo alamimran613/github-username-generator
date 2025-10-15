@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alamimran613.github.io/github-username-generator/sitemap.xml

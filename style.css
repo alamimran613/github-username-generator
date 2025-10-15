@@ -940,3 +940,154 @@ button.loading::after {
 [data-theme="light"] .nav-link.active {
   color: var(--primary-color);
 }
+
+/* ========================================
+   About Page Enhanced Readability
+   ======================================== */
+
+/* About page header styling */
+.about-header,
+.tool-header {
+  text-align: center;
+  margin: 30px auto 40px;
+  padding: 20px;
+}
+
+.about-header h1,
+.tool-header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+}
+
+.tool-subtitle {
+  font-size: 1.15rem;
+  color: #ffffff;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Feature panels with better contrast */
+.feature-panel {
+  background: var(--card-background);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 30px;
+  margin-bottom: 25px;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.feature-panel:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--primary-color);
+}
+
+/* Panel headers - make them stand out */
+.panel-header h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Help text - bright white, easy to read */
+.help-text {
+  color: #ffffff !important;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.help-text p {
+  color: #ffffff !important;
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+
+.help-text strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.help-text br {
+  margin-bottom: 8px;
+}
+
+/* List items - bullet points style */
+.help-text p:has(strong):first-line {
+  font-weight: 600;
+}
+
+/* CTA button styling */
+.help-text a {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white !important;
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+}
+
+.help-text a:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 210, 255, 0.6);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .about-header h1,
+  .tool-header h1 {
+    font-size: 2rem;
+  }
+  
+  .feature-panel {
+    padding: 20px;
+  }
+  
+  .panel-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .help-text {
+    font-size: 1rem;
+  }
+}
+
+/* Light mode adjustments */
+[data-theme="light"] .help-text p,
+[data-theme="light"] .help-text {
+  color: #1a1a1a !important;
+}
+
+[data-theme="light"] .feature-panel {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   Force Center Panel Titles
+   ======================================== */
+
+/* Target all panel headers */
+.dual-panel .panel-header h2,
+.panel-header h2,
+h2 {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+/* Specifically target Check Availability and Generate Usernames titles */
+.dual-panel h2 {
+  text-align: center !important;
+}
