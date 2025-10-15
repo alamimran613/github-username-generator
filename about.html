@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - GitHub Username Generator | Techno Snag</title>
+  <meta name="description" content="Learn about our free GitHub username generator tool. Features, how to use, and GitHub username best practices for developers.">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="https://www.youtube.com/@TechnoSnag" target="_blank" class="nav-link nav-youtube">YouTube</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- About Header -->
+    <div class="tool-header">
+      <h1>About This Tool</h1>
+      <p class="tool-subtitle">Free GitHub username generator and availability checker</p>
+    </div>
+
+    <!-- Features Section -->
+    <div class="feature-panel">
+      <div class="panel-header">
+        <h2>✨ Key Features</h2>
+      </div>
+      <div class="help-text" style="display: block; margin-bottom: 15px;">
+        <p style="margin-bottom: 12px;"><strong>🔍 Real-time Availability Checking</strong><br>Instantly verify if your desired GitHub username is available using the official GitHub API.</p>
+        <p style="margin-bottom: 12px;"><strong>💡 Smart Username Generation</strong><br>Generate unique, professional username ideas based on your name or keywords.</p>
+        <p style="margin-bottom: 12px;"><strong>⚡ Rate Limit Protection</strong><br>Built-in API management prevents errors and tracks your usage (55 calls per hour).</p>
+        <p style="margin-bottom: 12px;"><strong>📱 Mobile Friendly</strong><br>Works perfectly on all devices - desktop, tablet, and mobile.</p>
+        <p style="margin-bottom: 12px;"><strong>🎨 Dark/Light Mode</strong><br>Choose your preferred theme for comfortable viewing anytime.</p>
+        <p><strong>🆓 Completely Free</strong><br>No registration, no payment, no hidden fees - 100% free forever.</p>
+      </div>
+    </div>
+
+    <!-- How to Use Section -->
+    <div class="feature-panel">
+      <div class="panel-header">
+        <h2>📖 How to Use</h2>
+      </div>
+      <div class="help-text" style="display: block;">
+        <p style="margin-bottom: 12px;"><strong>Step 1: Check Availability</strong><br>Enter your desired username in the "Check Availability" panel and click the button. The tool will instantly tell you if it's available on GitHub.</p>
+        <p style="margin-bottom: 12px;"><strong>Step 2: Generate Ideas</strong><br>If your username is taken, use the "Generate Usernames" panel. Enter your name or keywords, and the tool will create unique suggestions for you.</p>
+        <p><strong>Step 3: Copy & Use</strong><br>Found the perfect username? Click the "Copy" button next to any generated username to copy it instantly!</p>
+      </div>
+    </div>
+
+    <!-- Best Practices Section -->
+    <div class="feature-panel">
+      <div class="panel-header">
+        <h2>💡 GitHub Username Best Practices</h2>
+      </div>
+      <div class="help-text" style="display: block;">
+        <p style="margin-bottom: 8px;">• <strong>Keep it professional</strong> - Your username represents you in the developer community</p>
+        <p style="margin-bottom: 8px;">• <strong>Make it memorable</strong> - Short, easy-to-spell names are easier for others to remember</p>
+        <p style="margin-bottom: 8px;">• <strong>Use your real name</strong> - Consider using your actual name or a variation for personal branding</p>
+        <p style="margin-bottom: 8px;">• <strong>Avoid numbers when possible</strong> - Only alphanumeric characters and hyphens are allowed</p>
+        <p style="margin-bottom: 8px;">• <strong>Length matters</strong> - GitHub usernames can be 1-39 characters long</p>
+        <p>• <strong>Think long-term</strong> - Choose a username you'll be happy with for years to come</p>
+      </div>
+    </div>
+
+    <!-- About Creator -->
+    <div class="feature-panel">
+      <div class="panel-header">
+        <h2>👨‍💻 About the Creator</h2>
+      </div>
+      <div class="help-text" style="display: block; text-align: center;">
+        <p style="margin-bottom: 15px;">This tool was created by <strong style="color: var(--primary-color);">Techno Snag</strong>, a YouTube channel focused on DevOps projects, IT solutions, and tech tutorials.</p>
+        <p style="margin-bottom: 20px;">Visit our YouTube channel for more helpful developer tools and tutorials!</p>
+        <a href="index.html" style="display: inline-block; padding: 12px 30px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;">
+          Try the Tool Now →
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>GitHub Username Generator</p>
+        <p class="footer-links">
+          Made with ❤️ by 
+          <a href="https://www.youtube.com/@TechnoSnag" target="_blank" rel="noopener noreferrer">
+            🎥 <strong>Techno Snag</strong>
+          </a>
+        </p>
+        <div class="visitor-counter">
+          <p>Total Visitors: <span id="visitor-count">Loading...</span></p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Initialize visitor counter for about page
+    updateVisitorCount();
+  </script>
+</body>
+</html>

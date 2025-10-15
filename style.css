@@ -828,3 +828,115 @@ button.loading::after {
     padding: 20px 16px;
   }
 }
+
+/* ========================================
+   Navigation Bar
+   ======================================== */
+
+.navbar {
+  background: transparent;
+  padding: 15px 0 20px 0;
+  margin-bottom: 10px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: var(--border-radius-sm);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  background: rgba(0, 210, 255, 0.1);
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+  background: rgba(0, 210, 255, 0.15);
+  font-weight: 600;
+}
+
+.nav-youtube {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white !important;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 4px 10px rgba(0, 210, 255, 0.3);
+}
+
+.nav-youtube:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 210, 255, 0.5);
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-menu {
+    gap: 20px;
+  }
+  
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+  
+  .nav-youtube {
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 0 15px 0;
+  }
+  
+  .nav-menu {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+  
+  .nav-youtube {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Light mode adjustments for navigation */
+[data-theme="light"] .nav-link {
+  color: #555;
+}
+
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .nav-link.active {
+  color: var(--primary-color);
+}
