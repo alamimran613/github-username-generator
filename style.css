@@ -784,3 +784,47 @@ button.loading::after {
   color: #fff;
 }
 
+/* ========================================
+   Adsterra Native Banner Styling
+   ======================================== */
+
+.native-ad-container {
+  max-width: 1200px;
+  margin: 40px auto 30px;
+  padding: 24px;
+  background: var(--panel-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.native-ad-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: Add subtle "Recommended" label */
+.native-ad-container::before {
+  content: "Recommended";
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+
+/* Ensure ads are centered */
+#container-513fd30e89aa1cc08cf8310894a3f6ad {
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .native-ad-container {
+    margin: 30px 16px 20px;
+    padding: 20px 16px;
+  }
+}
