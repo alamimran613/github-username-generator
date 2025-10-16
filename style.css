@@ -1091,3 +1091,131 @@ h2 {
 .dual-panel h2 {
   text-align: center !important;
 }
+
+/* ========================================
+   📢 SIDEBAR AD LAYOUT - FINAL FIX
+   Added: Oct 16, 2025
+   ======================================== */
+
+/* Main 3-column grid - NO BORDER */
+.page-wrapper {
+  display: grid !important;
+  grid-template-columns: 160px 1fr 160px !important;
+  gap: 20px !important;
+  max-width: 1600px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  
+  /* FORCE NO BORDER */
+  border: none !important;
+  border-width: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Make sure main-container is also invisible */
+.main-container {
+  max-width: 1200px !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  
+  /* NO BORDER */
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Sidebar ads */
+.sidebar-ad {
+  position: sticky;
+  top: 70px;
+  height: fit-content;
+  max-height: calc(100vh - 90px);
+  overflow: hidden;
+  align-self: start;
+}
+
+.ad-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+.ad-content {
+  background: var(--card-background);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition-medium);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.ad-content:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* ========================================
+   📱 RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1199px) {
+  .page-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+  
+  .sidebar-ad {
+    display: none;
+  }
+  
+  .main-container {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: 0 15px !important;
+  }
+}
+
+/* ========================================
+   📢 BOTTOM AD STYLING
+   ======================================== */
+
+.native-ad-container {
+  position: relative;
+  margin: 40px 0 30px;
+  padding: 35px 20px 20px;
+  background: var(--card-background);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.native-ad-container::before {
+  content: "Ads";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
